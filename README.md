@@ -1,2 +1,3 @@
-# cma.a413.govukprototypes
-A container project for prototypes using the GOV UK prototype toolkit 
+# CMA Prototypes
+
+Used to generate prototypes for CMA use when developing solutions.
