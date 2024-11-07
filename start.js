@@ -5,7 +5,7 @@ const fs = require('fs')
 checkFiles()
 
 // Local dependencies
-const usageData = require('./lib/usage_data')
+// const usageData = require('./lib/usage_data')
 
 // Get usageDataConfig from file, if exists
 const usageDataConfig = usageData.getUsageDataConfig()
