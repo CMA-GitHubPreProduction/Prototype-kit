@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+CMA RFI Prototype
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader({serviceName: "CMA RFI Prototype"}) }}
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="./index">Home</a>
+      </li>
+    </ol>
+  </div>
+
+  
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">CMA RFI Prototype</h1>
+
+      <p class="govuk-body">The links below illustrate ideas that will be further developed in a working solution for the CMA RFI project.</p>
+
+      <h2 class="govuk-heading-l">Authentication</h2>
+      <div class="govuk-inset-text">
+        For the administration interface, the system will use the GOV UK "One Login" system to authenticate users. For RFI responses, external users will use one-time access codes (for closed requests).
+      </div>
+      <ul class="govuk-list">
+        <li><a href="./login">Login</a></li>
+      </ul>
+
+      <h2 class="govuk-heading-l">Templates</h2>
+      <div class="govuk-inset-text">
+        RFI requests will be based on templates that can be re-used. A template sets out the content of the start page, the questions, validation rules, routing, and receipt email.
+      </div>
+      <ul class="govuk-list">
+        <li><a href="./rfi_template_list">RFI Templates</a></li>
+        <li><a href="./rfi_template_add_name">Create new template</a></li>
+        <li><a href="./rfi_template_edit">Edit existing template</a></li>
+      </ul>
+
+      <h2 class="govuk-heading-l">Requests</h2>
+      <div class="govuk-inset-text">
+        When requests are sent (based on templates), they can be viewed. Responses will file themselves into dataverse automatically.
+      </div>
+      <ul class="govuk-list">
+        <li><a href="./rfi_requests">RFI Requests</a></li>
+        <li><a href="./rfi_responses">RFI Responses</a></li>
+      </ul>
+        
+      
+    </div>
+
+  </div>
+{% endblock %}

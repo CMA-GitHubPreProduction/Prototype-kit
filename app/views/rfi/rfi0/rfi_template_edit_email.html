@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Email
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader({serviceName: "CMA RFI Prototype"}) }}
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="./rfi_template_edit_questions">Back</a>
+      </li>
+    </ol>
+  </div>
+
+  
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-xl">Receipt Email</h1>
+
+      <div class="govuk-inset-text">
+        When responses to requests for information are submitted, receipt emails are sent to respondents. You can edit the title and body of the receipt email below.
+      </div>
+      
+      <div class="govuk-form-group">
+        <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="10" aria-describedby="more-detail-hint">Thank you for your submission</strong><br /><br />Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend interdum eros. Praesent scelerisque tincidunt magna, nec tristique lectus rhoncus eu. Sed eu turpis diam. Morbi magna libero, accumsan vel erat tempor, dapibus ultrices neque.</textarea>
+      </div>
+            
+      <div class="govuk-button-group">
+        <a class="govuk-button" href="./rfi_template_edit">Make changes</a>
+        <a class="govuk-button govuk-button--secondary" href="./rfi_template_edit">Cancel</a>
+      </div>
+      
+
+
+    </div>
+
+  </div>
+{% endblock %}

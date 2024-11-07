@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Edit Survey
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader({serviceName: "CMA RFI Prototype"}) }}
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="./rfi_preview_2">Back</a>
+      </li>
+    </ol>
+  </div>
+
+  
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full govuk-!-width-two-thirds">
+
+      <h1 class="govuk-heading-xl">What happened?</h1>
+      
+      <div class="govuk-body">
+        <p>Tell us about the issue you need to report, and how it happened. You can upload evidence in the next step.</p>
+      </div>
+
+      <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="5000">
+        <div class="govuk-form-group">
+          <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="withHint" rows="10" aria-describedby="with-hint-info with-hint-hint">Donec sit amet ipsum ut urna venenatis consectetur vitae non enim. Suspendisse potenti. Etiam at odio libero.
+          
+Nunc pulvinar ante ipsum. Sed nec mattis nunc. Maecenas ut eleifend elit, ac efficitur felis. Nulla egestas purus a congue dapibus. Aliquam erat volutpat.
+            
+Suspendisse lacinia ante et ipsum ultricies, tincidunt convallis nunc aliquet. Vestibulum sodales tortor nunc, tempus malesuada quam eleifend ut. Quisque porttitor lacus eget porttitor lacinia. Integer massa ex, varius quis rutrum quis, accumsan et orci. Aliquam id nisl nec lorem volutpat pharetra. Pellentesque pulvinar cursus nunc id aliquam.
+  
+Suspendisse dapibus cursus arcu, sit amet viverra tortor tincidunt nec. Aliquam id ex dictum, tincidunt nisl in, hendrerit dolor. Morbi a commodo nunc. Vivamus gravida, nunc eget ullamcorper maximus, tortor lacus ullamcorper mauris, non rutrum justo velit ut risus. Quisque ac elit tellus. Maecenas accumsan fringilla turpis eget imperdiet. Etiam sed justo eu nunc hendrerit dignissim id venenatis orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean semper nisl ut sapien mollis, nec placerat sem aliquam. Sed nec ipsum rutrum, vulputate erat sit amet, pulvinar mauris. Nunc varius leo quis magna efficitur fringilla. Etiam eleifend orci ut urna mollis, et sollicitudin lorem consequat. Etiam turpis risus, vehicula vel interdum non, varius a libero. Nam non rhoncus arcu.
+  
+Sed finibus ultrices urna quis pretium. Suspendisse potenti. Vivamus non efficitur nulla. Ut bibendum condimentum lectus ut porttitor. Sed tincidunt erat eu augue laoreet venenatis. Vivamus laoreet ipsum a rhoncus rutrum. Aliquam eleifend vehicula risus et elementum. Morbi tincidunt quam et metus euismod sollicitudin. 
+          </textarea>
+        </div>
+        <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
+          You can enter up to 5000 characters
+        </div>
+      </div>
+
+      <div class="govuk-body">
+        <a class="govuk-button" href="./rfi_preview_4">Continue</a>
+      </div>  
+
+    </div>
+
+  </div>
+{% endblock %}

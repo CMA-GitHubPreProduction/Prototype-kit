@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Edit Survey
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader({serviceName: "CMA RFI Prototype"}) }}
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="./rfi_preview_2">Back</a>
+      </li>
+    </ol>
+  </div>
+
+  
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full govuk-!-width-two-thirds">
+
+      <h1 class="govuk-heading-xl">Contact email address</h1>
+      
+      <div class="govuk-body">
+        <p>Suspendisse eu feugiat tortor, ut faucibus nunc.</p>
+      </div>
+
+      <div class="govuk-form-group">
+        <input class="govuk-input" id="event-name" name="eventName" type="text" value="jonathan.beckett@transparity.com" />
+      </div>
+
+      <div class="govuk-body">
+        <a class="govuk-button" href="./rfi_preview_review">Continue</a>
+      </div>  
+
+    </div>
+
+  </div>
+{% endblock %}

@@ -1,0 +1,122 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Edit Survey
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader({serviceName: "CMA RFI Prototype"}) }}
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+  
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-l">Check your answers</h1>
+      
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What is your full name?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Jonathan Beckett
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="./rfi_preview_1">
+              Change
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What are you reporting?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            A problem with an organisation
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="./rfi_preview_2">
+              Change
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What happened?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Donec sit amet ipsum ut urna venenatis consectetur vitae non enim. Suspendisse potenti. Etiam at odio libero. Nunc pulvinar ante ipsum. Sed nec mattis nunc. Maecenas ut eleifend elit, ac efficitur felis. Nulla egestas purus a congue dapibus. Aliquam erat volutpat. Suspendisse lacinia ante et ipsum ultricies, tincidunt convallis nunc aliquet. Vestibulum sodales tortor nunc, tempus malesuada quam eleifend ut. Quisque porttitor lacus eget porttitor lacinia. Integer massa ex, varius quis rutrum quis, accumsan et orci. Aliquam id nisl nec lorem volutpat pharetra. Pellentesque pulvinar cursus nunc id aliquam.
+            <br /><br />
+            Suspendisse dapibus cursus arcu, sit amet viverra tortor tincidunt nec. Aliquam id ex dictum, tincidunt nisl in, hendrerit dolor. Morbi a commodo nunc. Vivamus gravida, nunc eget ullamcorper maximus, tortor lacus ullamcorper mauris, non rutrum justo velit ut risus. Quisque ac elit tellus. Maecenas accumsan fringilla turpis eget imperdiet. Etiam sed justo eu nunc hendrerit dignissim id venenatis orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean semper nisl ut sapien mollis, nec placerat sem aliquam. Sed nec ipsum rutrum, vulputate erat sit amet, pulvinar mauris. Nunc varius leo quis magna efficitur fringilla. Etiam eleifend orci ut urna mollis, et sollicitudin lorem consequat. Etiam turpis risus, vehicula vel interdum non, varius a libero. Nam non rhoncus arcu.
+            <br /><br />
+            Sed finibus ultrices urna quis pretium. Suspendisse potenti. Vivamus non efficitur nulla. Ut bibendum condimentum lectus ut porttitor. Sed tincidunt erat eu augue laoreet venenatis. Vivamus laoreet ipsum a rhoncus rutrum. Aliquam eleifend vehicula risus et elementum. Morbi tincidunt quam et metus euismod sollicitudin.
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="./survey_preview_3">
+              Change<span class="govuk-visually-hidden"> what do you like most about red?</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Evidence
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <ul class="govuk-list">
+              <li>example_photo.jpg</li>
+              <li>another_example_photo.jpg</li>
+            </ul>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="./rfi_preview_1">
+              Change
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Contact email address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            jonathan.beckett@transparity.com
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="./rfi_preview_1">
+              Change
+            </a>
+          </dd>
+        </div>
+      </dl>
+      
+      <h2 class="govuk-heading-m">Now submit this request for information</h2>
+      <p class="govuk-body">By submitting this survey you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+      <form action="./rfi_preview_summary" method="post" novalidate>
+        <input type="hidden" name="answers-checked" value="true">
+        <button class="govuk-button" data-module="govuk-button">
+          Accept and send
+        </button>
+      </form>
+    
+
+    </div>
+
+  </div>
+{% endblock %}

@@ -1,0 +1,111 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Edit Datatype
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader({serviceName: "CMA RFI Prototype"}) }}
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="./rfi_template_question_edit">Back</a>
+      </li>
+    </ol>
+  </div>
+
+  
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-xl">Edit Question Datatype</h1>
+
+      <div class="govuk-inset-text">
+        This is a reference name used within the RFI management interface to help identify a particular template.
+      </div>
+      
+      <div class="govuk-radios" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="datatype" name="datatype" type="radio" value="england">
+          <label class="govuk-label govuk-radios__label" for="datatype">
+            Single line text
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="datatype-2" name="datatype" type="radio" value="scotland">
+          <label class="govuk-label govuk-radios__label" for="datatype-2">
+            Multi line text
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="datatype-3" name="datatype" type="radio" value="wales">
+          <label class="govuk-label govuk-radios__label" for="datatype-3">
+            Number
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="datatype-4" name="datatype" type="radio" value="northern-ireland">
+          <label class="govuk-label govuk-radios__label" for="datatype-4">
+            Currency
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="datatype-4" name="datatype" type="radio" value="northern-ireland">
+          <label class="govuk-label govuk-radios__label" for="datatype-4">
+            Checkboxes
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="datatype-4" name="datatype" type="radio" value="northern-ireland">
+          <label class="govuk-label govuk-radios__label" for="datatype-4">
+            Dropdown
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="datatype-4" name="datatype" type="radio" value="northern-ireland">
+          <label class="govuk-label govuk-radios__label" for="datatype-4">
+            Radio buttons
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="datatype-4" name="datatype" type="radio" value="northern-ireland">
+          <label class="govuk-label govuk-radios__label" for="datatype-4">
+            Matrix
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="datatype-4" name="datatype" type="radio" value="northern-ireland">
+          <label class="govuk-label govuk-radios__label" for="datatype-4">
+            Lookup
+          </label>
+        </div>
+      </div>
+      <br />
+      <div class="govuk-button-group">
+        <a class="govuk-button" href="./rfi_template_question_edit">Make changes</a>
+        <a class="govuk-button govuk-button--secondary" href="./rfi_template_question_edit">Cancel</a>
+      </div> 
+
+    </div>
+
+  </div>
+{% endblock %}

@@ -1,0 +1,155 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Edit Template
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader({serviceName: "CMA RFI Prototype"}) }}
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="./rfi_template_list">Back</a>
+      </li>
+    </ol>
+  </div>
+
+  
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h2 class="govuk-heading-xl">Edit RFI Template</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Reference Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Example Request For Information A
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="./rfi_template_edit_name">
+              Change
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Look & Feel
+          </dt>
+          <dd class="govuk-summary-list__value">
+            GOV UK Design System
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="./rfi_template_edit_style">
+              Change
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Description
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend interdum eros. Praesent scelerisque tincidunt magna, nec tristique lectus rhoncus eu. Sed eu turpis diam. Morbi magna libero, accumsan vel erat tempor, dapibus ultrices neque.
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="./rfi_template_edit_description">
+              Change
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Questions
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header" >Number</th>
+                  <th scope="col" class="govuk-table__header" >Title</th>
+                  <th scope="col" class="govuk-table__header" >Data Type</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__cell">1</th>
+                  <td scope="row" class="govuk-table__cell">Full name</td>
+                  <td scope="row" class="govuk-table__cell">Single line text</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__cell">2</th>
+                  <td scope="row" class="govuk-table__cell">What are you reporting?</td>
+                  <td scope="row" class="govuk-table__cell">Choice</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__cell">3</th>
+                  <td scope="row" class="govuk-table__cell">Description of Problem</td>
+                  <td scope="row" class="govuk-table__cell">Multi-line Text</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__cell">4</th>
+                  <td scope="row" class="govuk-table__cell">Evidence</td>
+                  <td scope="row" class="govuk-table__cell">File Upload</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__cell">5</th>
+                  <td scope="row" class="govuk-table__cell">Contact email address</td>
+                  <td scope="row" class="govuk-table__cell">Single line text</td>
+                </tr>
+              </tbody>
+            </table>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="./rfi_template_edit_questions">
+              Change
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Receipt Email
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <strong>Thank you for your submission</strong><br /><br />Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend interdum eros. Praesent scelerisque tincidunt magna, nec tristique lectus rhoncus eu. Sed eu turpis diam. Morbi magna libero, accumsan vel erat tempor, dapibus ultrices neque.
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="./rfi_template_edit_email">
+              Change
+            </a>
+          </dd>
+        </div>
+  
+      </dl>
+  
+      <div class="govuk-body">
+        <a class="govuk-button" href="./rfi_template_list">Publish</a>
+        <a class="govuk-button govuk-button--secondary" href="./rfi_preview_0">Preview</a>
+      </div> 
+
+    </div>
+
+  </div>
+{% endblock %}

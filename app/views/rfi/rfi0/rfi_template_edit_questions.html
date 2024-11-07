@@ -1,0 +1,134 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Questions
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader({serviceName: "CMA RFI Prototype"}) }}
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="./rfi_template_edit">Back</a>
+      </li>
+    </ol>
+  </div>
+
+  
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-l">Edit Questions</h1>
+      <div class="govuk-inset-text">
+        A request for information template can have many questions, and many types of question. You can add, edit, and re-order questions below. Data validation and routing between questions is configured within each question.
+      </div>
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header" >Number</th>
+            <th scope="col" class="govuk-table__header" >Title</th>
+            <th scope="col" class="govuk-table__header" >Data Type</th>
+            <th scope="col" class="govuk-table__header" >Action</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__cell" colspan="3">Page 1</th>
+            <td scope="row" class="govuk-table__cell" colspan="1"><a href="#">Remove</a> <a href="#">Move Down</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__cell"></th>
+            <td scope="row" class="govuk-table__cell">Full name</td>
+            <td scope="row" class="govuk-table__cell">Single line text</td>
+            <td scope="row" class="govuk-table__cell"><a href="./rfi_template_question_edit">Edit</a> <a href="#">Remove</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__cell" colspan="3">Page 2</th>
+            <td scope="row" class="govuk-table__cell" colspan="1"><a href="#">Remove</a> <a href="#">Move Up</a> <a href="#">Move Down</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__cell"></th>
+            <td scope="row" class="govuk-table__cell">Address</td>
+            <td scope="row" class="govuk-table__cell">Multi-line Text</td>
+            <td scope="row" class="govuk-table__cell"><a href="./rfi_template_question_edit">Edit</a> <a href="#">Remove</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__cell"></th>
+            <td scope="row" class="govuk-table__cell">Postcode</td>
+            <td scope="row" class="govuk-table__cell">Single-line Text</td>
+            <td scope="row" class="govuk-table__cell"><a href="./rfi_template_question_edit">Edit</a> <a href="#">Remove</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__cell" colspan="3">Page 3</th>
+            <td scope="row" class="govuk-table__cell" colspan="1"><a href="#">Remove</a> <a href="#">Move Up</a> <a href="#">Move Down</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__cell"></th>
+            <td scope="row" class="govuk-table__cell">What are you reporting?</td>
+            <td scope="row" class="govuk-table__cell">Choice</td>
+            <td scope="row" class="govuk-table__cell"><a href="./rfi_template_question_edit">Edit</a> <a href="#">Remove</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__cell" colspan="3">Page 4</th>
+            <td scope="row" class="govuk-table__cell" colspan="1"><a href="#">Remove</a> <a href="#">Move Up</a> <a href="#">Move Down</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__cell"></th>
+            <td scope="row" class="govuk-table__cell">Description of Problem</td>
+            <td scope="row" class="govuk-table__cell">Multi-line Text</td>
+            <td scope="row" class="govuk-table__cell"><a href="./rfi_template_question_edit">Edit</a> <a href="#">Remove</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__cell" colspan="3">Page 5</th>
+            <td scope="row" class="govuk-table__cell" colspan="1"><a href="#">Remove</a> <a href="#">Move Up</a> <a href="#">Move Down</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__cell"></th>
+            <td scope="row" class="govuk-table__cell">Evidence</td>
+            <td scope="row" class="govuk-table__cell">File Upload</td>
+            <td scope="row" class="govuk-table__cell"><a href="./rfi_template_question_edit">Edit</a> <a href="#">Remove</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__cell" colspan="3">Page 6</th>
+            <td scope="row" class="govuk-table__cell" colspan="1"><a href="#">Remove</a> <a href="#">Move Up</a> </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__cell"></th>
+            <td scope="row" class="govuk-table__cell">Contact email address</td>
+            <td scope="row" class="govuk-table__cell">Multi-line Text</td>
+            <td scope="row" class="govuk-table__cell"><a href="./rfi_template_question_edit">Edit</a> <a href="#">Remove</a></td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <div class="govuk-button-group">
+        <a class="govuk-button" href="#">Add New Page</a>
+        <a class="govuk-button" href="#">Add New Question</a>
+        <a class="govuk-button" href="#">Add Existing Question</a>
+      </div>
+
+
+    </div>
+
+  </div>
+{% endblock %}

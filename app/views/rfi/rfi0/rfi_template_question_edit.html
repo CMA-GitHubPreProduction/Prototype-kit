@@ -1,0 +1,170 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Edit Question
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader({serviceName: "CMA RFI Prototype"}) }}
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="./rfi_template_edit_questions">Back</a>
+      </li>
+    </ol>
+  </div>
+
+  
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-xl">Edit Question</h1>
+
+      <div class="govuk-inset-text">
+        You can edit the title, description, data type, validation and routing related to the question below.
+      </div>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Question title
+          </dt>
+          <dd class="govuk-summary-list__value">
+            What are you reporting?
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Question description
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Please tell us the nature of the issue you are reporting.
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Data Type
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Radio buttons
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="./rfi_template_question_edit_datatype">
+              Change
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Radio button options
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <ul class="govuk-list">
+              <li>A problem with an sole trader</li>
+              <li>A problem with an organisation</li>
+              <li>A problem with a local authority</li>
+              <li>A problem with a service</li>
+              <li>Other</li>
+            </ul>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Validation Rules
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <ul class="govuk-list">
+              <li>Required</li>
+              <li>Other allowed</li>
+            </ul>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Routing
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Choice</th>
+                  <th scope="col" class="govuk-table__header">Route</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">A problem with a sole trader</th>
+                  <td class="govuk-table__cell">Go to next question</td>
+                </tr>  
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">A problem with an organisation</th>
+                  <td class="govuk-table__cell">Go to next question</td>
+                </tr> 
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">A problem with a local authority</th>
+                  <td class="govuk-table__cell">Go to next question</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">A problem with a service</th>
+                  <td class="govuk-table__cell">Custom routing</td>
+                </tr>
+              </tbody>
+            </table>    
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+    </div>
+
+  </div>
+{% endblock %}

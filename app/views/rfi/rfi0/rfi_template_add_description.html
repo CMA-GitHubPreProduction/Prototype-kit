@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Description
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader({serviceName: "CMA RFI Prototype"}) }}
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="./rfi_template_add_name">Back</a>
+      </li>
+    </ol>
+  </div>
+
+  
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-l">Description</h1>
+      
+      <div class="govuk-inset-text">
+        The description will appear on the start page of the request for information. Any introductory guidance to the user should go here. Markdown is supported.
+      </div>
+
+      <div class="govuk-form-group">
+        <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="10" aria-describedby="more-detail-hint">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend interdum eros. Praesent scelerisque tincidunt magna, nec tristique lectus rhoncus eu. Sed eu turpis diam. Morbi magna libero, accumsan vel erat tempor, dapibus ultrices neque.</textarea>
+      </div>
+            
+      <div class="govuk-button-group">
+        <a class="govuk-button" href="./rfi_template_add_questions">Continue</a>
+      </div>
+
+
+    </div>
+
+  </div>
+{% endblock %}

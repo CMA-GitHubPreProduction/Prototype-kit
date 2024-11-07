@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Templates
+{% endblock %}
+
+{% block header %}
+  {{ govukHeader({serviceName: "CMA RFI Prototype"}) }}
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="./index">Back</a>
+      </li>
+    </ol>
+  </div>
+
+  
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-xl">RFI Templates</h1>
+            
+      <p>The proposed system will allow users with appropriate access rights to manage RFI templates - essentially packaged sets of questions.</p>
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">RFI Templates</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Template Name</th>
+            <th scope="col" class="govuk-table__header">Status</th>
+            <th scope="col" class="govuk-table__header">Reference</th>
+            <th scope="col" class="govuk-table__header">Action</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Example RFI Questionnaire A</th>
+            <td class="govuk-table__cell">Draft</td>
+            <td class="govuk-table__cell">&nbsp;</td>
+            <td class="govuk-table__cell"><a href="./rfi_template_edit">Edit</a> <a href="./rfi_preview_0">Preview</a> <a href="./rfi_template_publish">Publish</a></td>
+          </tr>  
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Example RFI Questionnaire B</th>
+            <td class="govuk-table__cell">Published</td>
+            <td class="govuk-table__cell">RFI-00123</td>
+            <td class="govuk-table__cell"><a href="./rfi_template_edit">Edit</a> <a href="./rfi_preview_0">Preview</a> <a href="#">Unpublish</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Example RFI Questionnaire C</th>
+            <td class="govuk-table__cell">Published</td>
+            <td class="govuk-table__cell">RFI-00122</td>
+            <td class="govuk-table__cell"><a href="./rfi_template_edit">Edit</a> <a href="./rfi_preview_0">Preview</a> <a href="#">Unpublish</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Example RFI Questionnaire D</th>
+            <td class="govuk-table__cell">Published</td>
+            <td class="govuk-table__cell">RFI-00121</td>
+            <td class="govuk-table__cell"><a href="./rfi_template_edit">Edit</a> <a href="./rfi_preview_0">Preview</a> <a href="#">Unpublish</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Example RFI Questionnaire E</th>
+            <td class="govuk-table__cell">Published</td>
+            <td class="govuk-table__cell">RFI-00120</td>
+            <td class="govuk-table__cell"><a href="./rfi_template_edit">Edit</a> <a href="./rfi_preview_0">Preview</a> <a href="#">Unpublish</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="govuk-button-group">
+        <a class="govuk-button" href="./rfi_template_add_name">Create New RFI Template</a>
+      </div>
+
+
+    </div>
+
+  </div>
+{% endblock %}
